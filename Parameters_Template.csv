@@ -1,0 +1,58 @@
+Category,Parameter,Value,Unit,Description
+Location,Latitude,44.177188,degrees,Site latitude (positive = North)
+Location,Longitude,109.006687,degrees,Site longitude (positive = East)
+Location,Altitude,835,meters,Site altitude above sea level
+Location,Time_Step,60,Minutes,Time Step of the Calculation
+PV_System,Panel_Tilt,47.92,degrees,Panel tilt angle (0=horizontal 90=vertical)
+PV_System,Panel_Azimuth,180,degrees,Panel azimuth (180=South 90=East 270=West 0=North)
+PV_System,PV_Min_kWp,0,kWp,Minimum PV capacity to simulate
+PV_System,PV_Max_kWp,30000,kWp,Maximum PV capacity to simulate
+PV_System,PV_Step_kWp,3000,kWp,PV capacity step size
+PV_System,Temperature_Coefficient,-0.35,%_per_C,Temperature coefficient (%/°C)
+PV_System,PV_System_Losses,0.125,fraction,Total pv system losses (soiling wiring mismatch)
+PV_System,ACDC_Ratio,1.2,fraction,AC-DC RATIO
+PV_System,Inverter_Efficiency,0.98,fraction,Inverter efficiency
+PV_System,PV_LID,0.02,fraction,Light-Induced Degradation (LID).
+PV_System,PV_Degradation,0.005,per_year,Annual PV degradation rate
+BESS,BESS_Min_kWh,0,kWh,Minimum BESS capacity to simulate
+BESS,BESS_Max_kWh,60000,kWh,Maximum BESS capacity to simulate
+BESS,BESS_Step_kWh,6000,kWh,BESS capacity step size
+BESS,BESS_Hours,2,h,BESS C-rate
+BESS,Round_Trip_Efficiency,0.87,fraction,Battery round-trip efficiency
+BESS,SOC_Min,0.15,fraction,Minimum state of charge
+BESS,SOC_Max,0.95,fraction,Maximum state of charge
+BESS,Replacement_80,TRUE,boolean,Include 80% replacement threshold
+BESS,Replacement_70,FALSE,boolean,Include 70% replacement threshold
+BESS,Replacement_60,FALSE,boolean,Include 60% replacement threshold
+BESS,Never_Replace,FALSE,boolean,Include never-replace option
+Backup,Backup_Type,Grid+Diesel,text,Backup system type (Grid / Diesel / Grid+Diesel / None)
+Backup,Grid_Limit_Min_kW,0,kW,
+Backup,Grid_Limit_Max_kW,2500,kW,
+Backup,Grid_Limit_Step_kW,1250,kW,
+Backup,Diesel_Fuel_Consumption,0.5,L_per_kWh,Diesel fuel consumption
+Backup,Diesel_Fuel_Price,1.4,USD_per_L,Diesel fuel price
+Backup,Noon_Grid_Tariff,0.0814,USD_per_kWh,06:00 to 17:00 Grid energy tariff
+Backup,Peak_Grid_Tariff,0.136,USD_per_kWh,17:00 to 22:00 Grid energy tariff
+Backup,Night_Grid_Tariff,0.0457,USD_per_kWh,22:00 to 17:00 Grid energy tariff
+Financial,Simulation_Years,20,years,Project lifetime
+Financial,Discount_Rate,0.08,fraction,Discount rate for NPV calculations
+Financial,CAPEX_PV_Module,125,USD_per_kWp,PV module cost
+Financial,CAPEX_Mounting,20,USD_per_kWp,Mounting structure cost
+Financial,CAPEX_DC_BOS,60,USD_per_kWp,DC balance of system cost
+Financial,CAPEX_SCADA_Base,200000,USD,SCADA base cost (fixed)
+Financial,CAPEX_SCADA_per_kWp,0,USD_per_kWp,SCADA variable cost per kWp
+Financial,CAPEX_BESS_Battery,135,USD_per_kWh,Battery cost
+Financial,CAPEX_BESS_PCS,25,USD_per_kWh,Power conversion system cost
+Financial,CAPEX_BESS_BOS,15,USD_per_kWh,BESS balance of system cost
+Financial,CAPEX_Diesel,8,USD_per_kW,Diesel generator cost
+Financial,CAPEX_Grid,400000,USD,Grid connection cost (fixed)
+Financial,CAPEX_Other,134,USD_per_kWp,"Every other costs (relay, weather station)"
+Financial,OPEX_PV,2,USD_per_kW_per_year,PV O&M cost
+Financial,OPEX_BESS,6,USD_per_kWh_per_year,BESS O&M cost
+Financial,OPEX_Grid,132,USD_per_kW_per_year,Grid Connection Contract Cost per Installed kW
+Financial,OPEX_Diesel,40,USD_per_kW_per_year,Diesel O&M cost
+Financial,Diesel_Escalation,0,,
+Financial,Grid_Escalation,0,,
+Financial,OM_Escalation,0,,
+Filters,LCOE_Threshold,1,USD_per_kWh,Maximum acceptable LCOE (scenarios above this are filtered out)
+Filters,Min_Self_Sufficiency,0,percent,Minimum self-sufficiency percentage required
